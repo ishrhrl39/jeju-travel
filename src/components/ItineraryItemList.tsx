@@ -419,7 +419,11 @@ export default function ItineraryItemList({
                           {infoLines.length > 0 && (
                             <div className="info">
                               {infoLines.map((line, lineIndex) => (
-                                <span key={`info-${lineIndex}`}>{line}</span>
+                                <div
+                                  key={`info-${lineIndex}`}
+                                  className="info-line"
+                                  dangerouslySetInnerHTML={{ __html: line }}
+                                />
                               ))}
                             </div>
                           )}
@@ -476,7 +480,7 @@ export default function ItineraryItemList({
                           infoText: event.target.value,
                         }))
                       }
-                      placeholder="주소, 설명 등"
+                      placeholder="HTML 입력 가능 (예: &lt;a href=&quot;...&quot;&gt;링크&lt;/a&gt;)"
                     />
                   </label>
                   <label className="item-editor-full">

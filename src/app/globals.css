@@ -186,8 +186,17 @@ a {
   color: var(--text);
 }
 
-.info span {
+.info .info-line {
   display: block;
+}
+
+.info .info-line + .info-line {
+  margin-top: 4px;
+}
+
+.info a {
+  color: var(--accent);
+  text-decoration: underline;
 }
 
 .memo {
@@ -558,7 +567,7 @@ a {
   margin-top: 0;
 }
 
-.item-summary-details-content .info span,
+.item-summary-details-content .info-line,
 .item-summary-details-content .memo span {
   line-height: 1.6;
 }
