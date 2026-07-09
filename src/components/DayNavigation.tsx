@@ -14,9 +14,14 @@ export default function DayNavigation({
 }: DayNavigationProps) {
   return (
     <nav className="day-nav" aria-label="일정 탐색">
-      <Link href="/" className="day-nav-home">
-        전체 일정
-      </Link>
+      <div className="day-nav-top">
+        <Link href="/" className="day-nav-home">
+          전체 일정
+        </Link>
+        <Link href="/memos" className="day-nav-home">
+          메모 관리
+        </Link>
+      </div>
 
       <div className="day-nav-links">
         {prev ? (

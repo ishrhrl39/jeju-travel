@@ -1,7 +1,11 @@
-import { DAYS } from "@/data/itinerary";
-import Link from "next/link";
+import HomeDayList from "@/components/HomeDayList";
+import { getAllDays } from "@/lib/itinerary-db";
 
-export default function HomePage() {
+export const dynamic = "force-dynamic";
+
+export default async function HomePage() {
+  const days = await getAllDays();
+
   return (
     <main className="home">
       <div className="home-container">
@@ -13,26 +17,7 @@ export default function HomePage() {
           </p>
         </header>
 
-        <div className="day-list">
-          {DAYS.map((day) => (
-            <Link key={day.slug} href={`/${day.slug}`} className="day-card">
-              <div className="day-card-content">
-                <h2>
-                  {day.dayNumber}일차 · 7/{day.slug.slice(2)}
-                </h2>
-                <p>{day.subtitle}</p>
-              </div>
-              <div
-                className="day-card-badge"
-                style={{
-                  background: day.accentGradient ?? day.accentColor,
-                }}
-              >
-                {day.slug}
-              </div>
-            </Link>
-          ))}
-        </div>
+        <HomeDayList days={days} />
       </div>
     </main>
   );
