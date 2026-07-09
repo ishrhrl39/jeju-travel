@@ -71,6 +71,18 @@ function createEmptyItem(): EditableItem {
   };
 }
 
+function getDefaultExpandedKeys(items: EditableItem[]) {
+  return new Set(
+    items
+      .filter((item) => {
+        const hasInfo = textToLines(item.infoText).length > 0;
+        const hasMemo = textToLines(item.memoText).length > 0;
+        return hasInfo || hasMemo;
+      })
+      .map((item) => item.clientKey),
+  );
+}
+
 export default function ItineraryItemList({
   daySlug,
   initialItems,
@@ -80,14 +92,17 @@ export default function ItineraryItemList({
   );
   const [editingKey, setEditingKey] = useState<string | null>(null);
   const [editSnapshot, setEditSnapshot] = useState<EditableItem | null>(null);
-  const [expandedKeys, setExpandedKeys] = useState<Set<string>>(new Set());
+  const [expandedKeys, setExpandedKeys] = useState<Set<string>>(() =>
+    getDefaultExpandedKeys(initialItems.map(toEditableItem)),
+  );
   const [itemSaveState, setItemSaveState] = useState<Record<string, ItemSaveState>>({});
 
   useEffect(() => {
-    setItems(initialItems.map(toEditableItem));
+    const nextItems = initialItems.map(toEditableItem);
+    setItems(nextItems);
     setEditingKey(null);
     setEditSnapshot(null);
-    setExpandedKeys(new Set());
+    setExpandedKeys(getDefaultExpandedKeys(nextItems));
   }, [initialItems]);
 
   const setItemState = useCallback((clientKey: string, state: ItemSaveState) => {
@@ -186,11 +201,11 @@ export default function ItineraryItemList({
       }
 
       const saved = (await response.json()) as ItineraryItem;
-      setItems((current) =>
-        current.map((entry) =>
-          entry.clientKey === clientKey ? mapSavedItem(saved) : entry,
-        ),
+      const nextItems = items.map((entry) =>
+        entry.clientKey === clientKey ? mapSavedItem(saved) : entry,
       );
+      setItems(nextItems);
+      setExpandedKeys(getDefaultExpandedKeys(nextItems));
       setItemState(clientKey, "saved");
       setEditingKey(null);
       setEditSnapshot(null);
@@ -261,7 +276,9 @@ export default function ItineraryItemList({
     }
 
     const saved = (await response.json()) as { items: ItineraryItem[] };
-    setItems(saved.items.map(toEditableItem));
+    const nextItems = saved.items.map(toEditableItem);
+    setItems(nextItems);
+    setExpandedKeys(getDefaultExpandedKeys(nextItems));
   }
 
   async function moveItem(index: number, direction: -1 | 1) {
