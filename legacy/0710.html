@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>제주 여행 일정표</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Pretendard","Noto Sans KR",sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    padding:40px;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+}
+
+.header{
+    background:#4F7DF3;
+    color:white;
+    padding:30px;
+    border-radius:16px;
+    margin-bottom:25px;
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+}
+
+.header h1{
+    font-size:32px;
+    margin-bottom:8px;
+}
+
+.header p{
+    opacity:.9;
+}
+
+.timeline{
+    position:relative;
+    margin-left:25px;
+}
+
+.timeline:before{
+    content:'';
+    position:absolute;
+    left:8px;
+    top:0;
+    bottom:0;
+    width:3px;
+    background:#d8dce8;
+}
+
+.item{
+    position:relative;
+    margin-bottom:28px;
+    padding-left:35px;
+}
+
+.item:before{
+    content:'';
+    position:absolute;
+    left:0;
+    top:10px;
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    background:#4F7DF3;
+}
+
+.card{
+    background:white;
+    border-radius:14px;
+    padding:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.time{
+    color:#4F7DF3;
+    font-weight:bold;
+    font-size:18px;
+    margin-bottom:8px;
+}
+
+.title{
+    font-size:22px;
+    font-weight:700;
+    margin-bottom:12px;
+}
+
+.info{
+    margin-top:10px;
+    line-height:1.8;
+    color:#444;
+}
+
+.info span{
+    display:block;
+}
+
+.memo{
+    margin-top:10px;
+    padding:12px;
+    background:#F8F9FC;
+    border-left:4px solid #4F7DF3;
+    border-radius:8px;
+}
+
+.summary{
+    margin-top:40px;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.summary h2{
+    margin-bottom:15px;
+    color:#4F7DF3;
+}
+
+.summary textarea{
+    width:100%;
+    min-height:120px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    padding:15px;
+    resize:vertical;
+}
+
+@media print{
+
+body{
+    background:white;
+    padding:0;
+}
+
+.header{
+    box-shadow:none;
+}
+
+.card{
+    box-shadow:none;
+    border:1px solid #ddd;
+}
+
+.summary{
+    box-shadow:none;
+    border:1px solid #ddd;
+}
+
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>✈ 제주 여행 일정</h1>
+        <p>2026년 7월 10일 (금) · 제주 도착 08:00</p>
+    </div>
+
+    <div class="timeline">
+
+        <div class="item">
+            <div class="card">
+                <div class="time">①</div>
+                <div class="title">렌트카 수령</div>
+
+                <div class="info">
+                    <span>🚗 공항 도착 후 렌터카 인수</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="card">
+                <div class="time">②</div>
+                <div class="title">풍어횟집 (한치회)</div>
+
+                <div class="info">
+                    <span>📍 제주특별자치도 제주시 일주동로 55</span>
+                </div>
+
+                <div class="memo">
+                    한치회 맛집
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="card">
+                <div class="time">③</div>
+                <div class="title">제주 유리네식당</div>
+
+                <div class="info">
+                    <span>📍 제주시 연북로 146</span>
+                </div>
+
+                <div class="memo">
+                    ✔ 갈치구이<br>
+                    ✔ 성게미역국<br>
+                    ✔ 보말국<br>
+                    ✔ 고등어구이
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="card">
+                <div class="time">④</div>
+                <div class="title">만장굴</div>
+
+                <div class="memo">
+                    수건을 챙기기
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="card">
+                <div class="time">⑤</div>
+                <div class="title">각지해수욕장</div>
+
+                <div class="memo">
+                    관광 및 휴식
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="summary">
+        <h2>📝 여행 메모</h2>
+        <textarea placeholder="여행 중 메모를 작성하세요."></textarea>
+    </div>
+
+</div>
+
+</body>
+</html>

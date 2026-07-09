@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>제주 여행 일정 - 3일차</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Pretendard","Noto Sans KR",sans-serif;
+}
+
+body{
+    background:#F5F7FA;
+    padding:40px;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+}
+
+.header{
+    background:linear-gradient(135deg,#FF8A65,#FF7043);
+    color:white;
+    padding:30px;
+    border-radius:18px;
+    margin-bottom:30px;
+}
+
+.header h1{
+    font-size:32px;
+}
+
+.header p{
+    margin-top:8px;
+    opacity:.9;
+}
+
+.timeline{
+    position:relative;
+    margin-left:25px;
+}
+
+.timeline::before{
+    content:'';
+    position:absolute;
+    left:9px;
+    top:0;
+    bottom:0;
+    width:3px;
+    background:#ddd;
+}
+
+.item{
+    position:relative;
+    margin-bottom:28px;
+    padding-left:40px;
+}
+
+.item::before{
+    content:'';
+    position:absolute;
+    left:0;
+    top:10px;
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    background:#FF7043;
+}
+
+.card{
+    background:white;
+    border-radius:14px;
+    padding:22px;
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+}
+
+.title{
+    font-size:24px;
+    font-weight:bold;
+    margin-bottom:12px;
+}
+
+.time{
+    color:#FF7043;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.info{
+    color:#555;
+    line-height:1.8;
+}
+
+.memo{
+    margin-top:15px;
+    background:#FFF3EF;
+    border-left:4px solid #FF7043;
+    padding:12px;
+    border-radius:8px;
+}
+
+.summary{
+    margin-top:35px;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+}
+
+.summary h2{
+    color:#FF7043;
+    margin-bottom:15px;
+}
+
+.summary textarea{
+    width:100%;
+    min-height:120px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    padding:15px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+    <h1>🌺 제주 여행 3일차</h1>
+    <p>2026년 7월 12일 (일)</p>
+</div>
+
+<div class="timeline">
+
+    <div class="item">
+        <div class="card">
+
+            <div class="title">
+                🌊 엉또폭포
+            </div>
+
+            <div class="info">
+                📍 제주특별자치도 서귀포시 강정동
+            </div>
+
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="card">
+
+            <div class="title">
+                🌸 휴애리 자연생활공원
+            </div>
+
+            <div class="info">
+                📍 제주특별자치도 서귀포시 남원읍 신례동로 256
+            </div>
+
+            <div class="memo">
+                수국축제 관람
+            </div>
+
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="card">
+
+            <div class="title">
+                🏊 논짓물 담수풀장
+            </div>
+
+            <div class="time">
+                오전 10시부터 무료
+            </div>
+
+            <div class="info">
+                📍 제주특별자치도 서귀포시 예래해안로 256
+            </div>
+
+            <div class="memo">
+                천연 담수풀장
+            </div>
+
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="card">
+
+            <div class="title">
+                🎉 공항 근처 축제
+            </div>
+
+            <div class="time">
+                오후 1시 ~ 4시
+            </div>
+
+            <div class="memo">
+                • 건춘고기집 방문<br>
+                • 공룡해수욕장
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<div class="summary">
+
+    <h2>📝 오늘의 메모</h2>
+
+    <textarea placeholder="여행 메모를 입력하세요."></textarea>
+
+</div>
+
+</div>
+
+</body>
+</html>

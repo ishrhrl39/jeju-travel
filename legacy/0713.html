@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>제주 여행 일정 - 4일차</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Pretendard","Noto Sans KR",sans-serif;
+}
+
+body{
+    background:#f5f7fb;
+    padding:40px;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+}
+
+.header{
+    background:linear-gradient(135deg,#3F51B5,#5C6BC0);
+    color:white;
+    padding:30px;
+    border-radius:18px;
+    margin-bottom:30px;
+}
+
+.header h1{
+    font-size:32px;
+}
+
+.header p{
+    margin-top:8px;
+    opacity:.9;
+}
+
+.timeline{
+    position:relative;
+    margin-left:24px;
+}
+
+.timeline::before{
+    content:'';
+    position:absolute;
+    left:9px;
+    top:0;
+    bottom:0;
+    width:3px;
+    background:#ddd;
+}
+
+.item{
+    position:relative;
+    padding-left:40px;
+    margin-bottom:28px;
+}
+
+.item::before{
+    content:'';
+    position:absolute;
+    left:0;
+    top:10px;
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    background:#3F51B5;
+}
+
+.card{
+    background:#fff;
+    border-radius:14px;
+    padding:22px;
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+}
+
+.title{
+    font-size:24px;
+    font-weight:700;
+    margin-bottom:12px;
+}
+
+.info{
+    line-height:1.8;
+    color:#555;
+}
+
+.memo{
+    margin-top:15px;
+    padding:12px;
+    border-left:4px solid #3F51B5;
+    background:#F5F7FF;
+    border-radius:8px;
+}
+
+.summary{
+    margin-top:35px;
+    background:white;
+    padding:25px;
+    border-radius:14px;
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+}
+
+.summary textarea{
+    width:100%;
+    min-height:120px;
+    padding:15px;
+    border:1px solid #ddd;
+    border-radius:8px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">
+    <h1>✈ 제주 여행 4일차</h1>
+    <p>2026년 7월 13일 (월)</p>
+</div>
+
+<div class="timeline">
+
+    <div class="item">
+        <div class="card">
+
+            <div class="title">
+                📍 묵연 바다은숙
+            </div>
+
+            <div class="info">
+                제주특별자치도 서귀포시 남원읍 수망리 산 188
+            </div>
+
+        </div>
+    </div>
+
+    <div class="item">
+        <div class="card">
+
+            <div class="title">
+                🌄 성산일출봉 또는 우도
+            </div>
+
+            <div class="memo">
+                여행 상황과 날씨에 따라 선택
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<div class="summary">
+
+    <h2>📝 여행 메모</h2>
+
+    <textarea placeholder="오늘의 여행 메모를 작성하세요."></textarea>
+
+</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>제주 여행 일정 - 5일차</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Pretendard","Noto Sans KR",sans-serif;
+}
+
+body{
+    background:#F5F7FA;
+    padding:40px;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+}
+
+.header{
+    background:linear-gradient(135deg,#2E7D32,#43A047);
+    color:#fff;
+    border-radius:18px;
+    padding:30px;
+    margin-bottom:30px;
+}
+
+.header h1{
+    font-size:32px;
+}
+
+.header p{
+    margin-top:8px;
+    opacity:.9;
+}
+
+.timeline{
+    position:relative;
+    margin-left:25px;
+}
+
+.timeline::before{
+    content:'';
+    position:absolute;
+    left:9px;
+    top:0;
+    bottom:0;
+    width:3px;
+    background:#ddd;
+}
+
+.item{
+    position:relative;
+    padding-left:40px;
+    margin-bottom:30px;
+}
+
+.item::before{
+    content:'';
+    position:absolute;
+    left:0;
+    top:10px;
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    background:#43A047;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    padding:22px;
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+}
+
+.title{
+    font-size:24px;
+    font-weight:bold;
+    margin-bottom:12px;
+}
+
+.info{
+    line-height:1.8;
+    color:#555;
+}
+
+.summary{
+    margin-top:35px;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+}
+
+.summary textarea{
+    width:100%;
+    min-height:150px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    padding:15px;
+    resize:vertical;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>🌲 제주 여행 5일차</h1>
+        <p>2026년 7월 14일 (화)</p>
+    </div>
+
+    <div class="timeline">
+
+        <div class="item">
+            <div class="card">
+
+                <div class="title">
+                    🌳 사려니숲길
+                </div>
+
+                <div class="info">
+                    제주를 대표하는 삼나무 숲길 산책
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="summary">
+
+        <h2>📝 여행 메모</h2>
+
+        <textarea placeholder="여행 메모를 작성하세요."></textarea>
+
+    </div>
+
+</div>
+
+</body>
+</html>
